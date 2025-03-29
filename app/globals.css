@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Keep only the dark theme variables */
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 346 100% 46%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 346 100% 46%;
+    --radius: 0.5rem;
+
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-black text-white;
+  }
+}
+
+@layer utilities {
+  .glow-text {
+    text-shadow: 0 0 10px rgba(229, 9, 20, 0.7);
+  }
+
+  .glow-text-sm {
+    text-shadow: 0 0 5px rgba(229, 9, 20, 0.5);
+  }
+
+  .glow-sm {
+    box-shadow: 0 0 10px rgba(229, 9, 20, 0.5);
+  }
+
+  .glow-border {
+    box-shadow: 0 0 10px rgba(229, 9, 20, 0.5);
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(229, 9, 20, 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(229, 9, 20, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(229, 9, 20, 0);
+    }
+  }
+}
+
+/* RTL Support */
+[dir="rtl"] .space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+[dir="rtl"] .space-x-8 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+[dir="rtl"] .space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+[dir="rtl"] .mr-2 {
+  margin-right: 0;
+  margin-left: 0.5rem;
+}
+
+[dir="rtl"] .mr-3 {
+  margin-right: 0;
+  margin-left: 0.75rem;
+}
+
+[dir="rtl"] .mr-4 {
+  margin-right: 0;
+  margin-left: 1rem;
+}
+
+[dir="rtl"] .ml-1 {
+  margin-left: 0;
+  margin-right: 0.25rem;
+}
+
+[dir="rtl"] .ml-2 {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+/* Netflix-inspired dark UI styles */
+.netflix-bg {
+  @apply bg-black;
+}
+
+.netflix-card {
+  @apply bg-zinc-900 border-zinc-800 hover:border-zinc-700 transition-all duration-300;
+}
+
+.netflix-text-primary {
+  @apply text-white;
+}
+
+.netflix-text-secondary {
+  @apply text-zinc-400;
+}
+
+.netflix-input {
+  @apply bg-zinc-800 border-zinc-700 text-white placeholder:text-zinc-500;
+}
+
+.netflix-button {
+  @apply bg-primary hover:bg-primary/90 text-white;
+}
+
+.netflix-button-secondary {
+  @apply bg-zinc-800 hover:bg-zinc-700 text-white;
+}
+
+/* Accessibility improvements */
+.focus-visible:focus-visible {
+  @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-black;
+}
+
+/* Loading animation */
+.loading-pulse {
+  animation: pulse-loading 1.5s infinite;
+}
+
+@keyframes pulse-loading {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
