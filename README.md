@@ -93,4 +93,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - [Radix UI](https://www.radix-ui.com/)
 - [React Hook Form](https://react-hook-form.com/)
 
- 
+## Project links
+
+[Source](https://github.com/Up-to-code/streaming-platform) · [Issues](https://github.com/Up-to-code/streaming-platform/issues) · [Public project directory](https://github.com/qentrah/.github/blob/main/profile/PROJECTS.md)
